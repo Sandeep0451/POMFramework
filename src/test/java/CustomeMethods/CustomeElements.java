@@ -10,7 +10,6 @@ import java.time.Duration;
 
 public class CustomeElements {
     WebDriver driver;
-    WebDriverWait wait  = new WebDriverWait(driver, Duration.ofSeconds(30));
 
     public static void sendKeysOrValidate(WebDriverWait wait, String data, WebElement element){
 
