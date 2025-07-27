@@ -21,7 +21,7 @@ public class OrangeBase {
     public void creationOfWebDriver(){
         driver = new ChromeDriver();
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-        driver.manage().window().fullscreen();
+        driver.manage().window().maximize();
     }
 
     @Test
