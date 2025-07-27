@@ -9,8 +9,14 @@ public class LoginRepo {
 
     WebDriver driver;
 
-    @FindBy(xpath = "//textarea[@id='APjFqb']")
-    public WebElement usernameInput;
+    @FindBy(xpath = "//input[@name='username']")
+    public WebElement txtUsername;
+
+    @FindBy(xpath = "//input[@name='password']")
+    public WebElement txtPassword;
+
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement btnLogin;
 
 
     public LoginRepo(WebDriver driver) {
