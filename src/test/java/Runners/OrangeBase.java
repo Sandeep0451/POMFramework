@@ -14,7 +14,7 @@ import java.time.Duration;
 public class OrangeBase {
 
     WebDriver driver;
-
+    public String excelPath = "/home/sandeepthadoju/Automation/POMFramework/testData/TestData.xlsx";
 
 
     @BeforeTest
@@ -26,7 +26,8 @@ public class OrangeBase {
 
     @Test
     public void login(){
-        FirstRegression firstReg = new FirstRegression(driver);
+        String testCaseName = "TC_001";
+        FirstRegression firstReg = new FirstRegression(driver,testCaseName,excelPath);
         firstReg.firstRegression_01();
 
     }

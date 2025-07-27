@@ -8,8 +8,8 @@ public class FirstRegression {
 
     public Login loginScreen;
     public AdminScreen adminScreen;
-    public FirstRegression(WebDriver driver) {
-        loginScreen = new Login(driver);
+    public FirstRegression(WebDriver driver, String testCaseName, String excelPath) {
+        loginScreen = new Login(driver,testCaseName,excelPath);
         adminScreen = new AdminScreen(driver);
     }
 
