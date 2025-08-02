@@ -24,8 +24,8 @@ public class Login {
         testData = ExcelReader.getDataForTestCase(excelPath, screenName, testCaseName);
     }
     public void loginScreen(){
-        System.out.println(testData.get("TXT_Username"));
-      CustomeElements.sendKeysOrValidate(wait,testData.get("TXT_Username"), loginRepo.txtUsername);
+
+        CustomeElements.sendKeysOrValidate(wait,testData.get("TXT_Username"), loginRepo.txtUsername);
         CustomeElements.sendKeysOrValidate(wait,testData.get("TXT_Password"), loginRepo.txtPassword);
         CustomeElements.click(wait,loginRepo.btnLogin);
     }
