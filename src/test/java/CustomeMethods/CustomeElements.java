@@ -46,4 +46,9 @@ public class CustomeElements {
         }
 
     }
+
+    public static void verifyElementPresent(WebDriverWait wait, WebElement element,String text){
+        wait.until(ExpectedConditions.visibilityOf(element));
+        wait.until(ExpectedConditions.textToBePresentInElement(element,text));
+    }
 }

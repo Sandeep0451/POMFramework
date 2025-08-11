@@ -33,13 +33,19 @@ public class PIMScreen {
         CustomeElements.click(wait,PIMrepo.tabPIM);
         CustomeElements.dataClick(wait,PIMrepo.addButton,testData.get("BTN_AddUser"));
         wait.until(ExpectedConditions.visibilityOf(PIMrepo.txtFirstName));
-        //wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@name='firstName']")));
+
         CustomeElements.sendKeysOrValidate(wait,testData.get("TXT_FirstName"), PIMrepo.txtFirstName);
         CustomeElements.sendKeysOrValidate(wait,testData.get("TXT_MiddleName"), PIMrepo.txtMiddleName);
         CustomeElements.sendKeysOrValidate(wait,testData.get("TXT_LastName"), PIMrepo.txtLastName);
         CustomeElements.sendKeysOrValidate(wait,testData.get("TXT_EmployeeID"), PIMrepo.txtEmployeeID);
         CustomeElements.dataClick(wait,PIMrepo.chkCreateLogin,testData.get("CHK_CreateLogin"));
 
+        CustomeElements.sendKeysOrValidate(wait,testData.get("TXT_Username"), PIMrepo.txtCrtUsername);
+        wait.until(ExpectedConditions.visibilityOf(PIMrepo.txtCrtPassword));
+        CustomeElements.sendKeysOrValidate(wait,testData.get("TXT_Password"), PIMrepo.txtCrtPassword);
+        CustomeElements.sendKeysOrValidate(wait,testData.get("TXT_Password"), PIMrepo.txtCrtConfirmPassword);
+        CustomeElements.dataClick(wait,PIMrepo.btnSave,testData.get("BTN_Save"));
+        CustomeElements.verifyElementPresent(wait,PIMrepo.lblSuccessMessage,"Success");
 
     }
 }
