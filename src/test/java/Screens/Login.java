@@ -19,11 +19,11 @@ public class Login {
     public Login(WebDriver driver, String testCaseName,String excelPath) {
         this.driver = driver;
         loginRepo = new LoginRepo(driver);
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         String screenName = "Login";
         testData = ExcelReader.getDataForTestCase(excelPath, screenName, testCaseName);
     }
-    public void loginScreen(){
+    public void loginScreen() throws InterruptedException {
 
         CustomeElements.sendKeysOrValidate(wait,testData.get("TXT_Username"), loginRepo.txtUsername);
         CustomeElements.sendKeysOrValidate(wait,testData.get("TXT_Password"), loginRepo.txtPassword);

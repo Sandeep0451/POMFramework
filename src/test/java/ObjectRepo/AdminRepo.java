@@ -13,12 +13,6 @@ public class AdminRepo {
     @FindBy(xpath = "//span[text()='Admin']")
     public WebElement tabAdmin;
 
-    @FindBy(xpath = "//input[@name='password']")
-    public WebElement txtPassword;
-
-    @FindBy(xpath = "//button[@type='submit']")
-    public WebElement btnLogin;
-
 
     public AdminRepo(WebDriver driver) {
         this.driver = driver;

@@ -25,7 +25,7 @@ public class OrangeBase {
     }
 
     @Test
-    public void login(){
+    public void login() throws InterruptedException {
         String testCaseName = "TC_001";
         FirstRegression firstReg = new FirstRegression(driver,testCaseName,excelPath);
         firstReg.firstRegression_01();
